@@ -16,16 +16,17 @@ A Raspberry Pi model B+ with a 2014-06-20-wheezy-raspbian.img image was used.
   b. delete entries refering to ttyAMAo in the /boot/cmdline file. After deleting, my file
 consisted only of this line:
 
-dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait
+    dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait
 
 2) The /etc/rc.local file includes only one of the two following commands:
 
-  /home/pi/vitrines/equitable-load-file | xargs /home/pi/vitrines/stream-block.sh
-  /home/pi/vitrines/equitable-load-file | xargs /home/pi/vitrines/stream2.sh
+    /home/pi/vitrines/equitable-load-file | xargs /home/pi/vitrines/stream-block.sh
+  or
+    /home/pi/vitrines/equitable-load-file | xargs /home/pi/vitrines/stream2.sh
 
 See the comments in the shells scripts themselves.
 
-3) All other important programs reside in ~/vitrines
+3) All other important programs reside in the ~/vitrines directory.
 
 
 
