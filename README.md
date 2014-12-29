@@ -9,9 +9,9 @@ A Raspberry Pi model B+ with a 2014-06-20-wheezy-raspbian.img image was used.
 
 1. To make use of the UART, two file must be modified.
 
-a. Comment out the line refering to ttyAMA0 in /etc/inittab with a leading #:
+a. Comment out the following line refering to ttyAMA0 in /etc/inittab with a leading #:
 
-#T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100
+T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100
 
 b. delete entries refering to ttyAMAo in the /boot/cmdline file. After deleting, my file
 consisted only of this line:
